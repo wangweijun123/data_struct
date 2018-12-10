@@ -33,6 +33,29 @@ public class MyLinkedList2<E> {
         }
         size ++;
     }
+    
+    public Node<E> remove(int index) {
+        Node<E> target = get(index);
+        Node<E> pre = target.pre;
+        Node<E> next = target.next;
+        target.pre = null;
+        target.next = null;
+
+        if (pre == null) {
+            first = next;
+        } else {
+            pre.next = next;
+        }
+
+        if (next == null) {
+            last = pre;
+        } else {
+            next.pre = pre;
+        }
+
+        size--;
+        return  null;
+    }
 
     public Node<E> get(int index) {
         if (index >= size) {

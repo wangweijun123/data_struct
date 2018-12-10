@@ -53,6 +53,17 @@ public class TestMyLinkedList {
         for (int i = 0; i < size; i++) {
             System.out.print(i + ":" + myLinkedList.get(i).item + "   ");
         }
+
+        int deleteIndex = 1;
+        myLinkedList.remove(deleteIndex);
+
+        size = myLinkedList.size();
+        System.out.println();
+        System.out.println("deleteIndex:" + deleteIndex + "被删除后的 size:" + size);
+        for (int i = 0; i < size; i++) {
+            System.out.print(i + ":" + myLinkedList.get(i).item + "   ");
+        }
+
     }
     /*@Test
     public void testUser() {
